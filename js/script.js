@@ -8,16 +8,42 @@ Categoria selezionata dall’utente */
 
 
 //variabili
-
+var campoKm = document.getElementById('km');
+console.log("Km da percorrere:", campoKm.value); 
 
 
 //variabili associate a button e output
 
-var nameTicket = document.getElementById("name");
+var nameTicket = document.getElementById("name-ticket");
 
 var tragittoTicket = document.getElementById("km");
 
-var FasciaTicket = document.getElementById("eta");
+var FasciaTicket = document.getElementById("fascia");
+
+var finalPrice = document.getElementById("costoTicket");
+
+// variabili prezzo
+
+var discount20Price = document.getElementById("costoTicket");
+
+var discount40Price = document.getElementById("costoTicket");
+
+//variabili codici
+
+var trainCode = document.getElementById("carrozza");
+
+var codiceCp = document.getElementById("codice-cp");
+
+//OPERAZIONI
+
+//calcolo prezzo biglietto
+var ticketPrice = (campoKm.value * 0.21);
+
+//calcolo biglietto con sconto 20%
+var discount20 = (ticketPrice - (ticketPrice * 0.2)).toFixed(2);
+
+//calcolo biglietto con sconto 40%
+var discount40 = (ticketPrice - (ticketPrice * 0.4)).toFixed(2);
 
 
 var bottoneGenera = document.getElementById("bottone_genera");
@@ -26,13 +52,30 @@ bottoneGenera.addEventListener('click' ,
     function() { 
         var campoName = document.getElementById('name');
         console.log("Nome passeggero:", campoName.value);
-        var campoKm = document.getElementById('km');
-        console.log("Km da percorrere:", campoKm.value); 
+
         var eta = document.getElementById('eta');
         console.log("Età passeggero:", eta.value); 
+
+        var campoKm = document.getElementById('km');
+        console.log("Km da percorrere:", campoKm.value);
+
+        var ticketPrice = (campoKm.value * 0.21);
+        console.log(ticketPrice);
+
         nameTicket.innerHTML =  campoName.value;
-        tragittoTicket.innerHTML = campoKm.value;
         FasciaTicket.innerHTML = eta.value;
+        trainCode.innerHTML = Math.floor(Math.random() * 10000) + 90000;
+        codiceCp.innerHTML = Math.floor(Math.random() * 1000) + 10000;
+
+        if (eta.value === "Minorenne") {
+            document.getElementById("costoTicket").innerHTML = discount20;
+        }
+        else if (eta.value === "Anziano") {
+        discount40Price.innerHTML = discount40;
+        }
+        else {
+        finalPrice.innerHTML = ticketPrice;
+        }
     }
 );
 
@@ -45,4 +88,10 @@ bottoneAnnulla.addEventListener('click',
         document.getElementById('eta').selectedIndex = 0;
     }
 );
+
+
+
+
+// OUTPUT
+
 
