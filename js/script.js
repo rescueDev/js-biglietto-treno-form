@@ -69,12 +69,15 @@ bottoneGenera.addEventListener('click' ,
 
         if (eta.value === "Minorenne") {
             document.getElementById("costoTicket").innerHTML = discount20;
+            console.log(discount20); 
         }
         else if (eta.value === "Anziano") {
         discount40Price.innerHTML = discount40;
+        console.log(discount40);
         }
         else {
         finalPrice.innerHTML = ticketPrice;
+        console.log(ticketPrice);
         }
     }
 );
