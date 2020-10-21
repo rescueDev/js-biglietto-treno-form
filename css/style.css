@@ -8,14 +8,37 @@
     width: 100%;
     height: 600px;
     display: flex;
-    flex:nowrap row;
+    flex-direction: column;
     justify-content: center;
     background-color: salmon;
 
 }
 
 form {
+    display: flex;
     align-self: center;
+    justify-content: center;
     width: 80%;
-    text-align: center;
+    min-height: 200px;
+    text-align: center; 
+    border:1px solid whitesmoke;
+    background-color: whitesmoke;
+}
+
+#contenuto-form {
+    align-self:center;
+}
+
+#popup_ticket {
+   display: flex; 
+   align-self: center;
+   justify-content: center;
+   width: 80%;
+   min-height: 200px;
+   background-color: whitesmoke; 
+   border:1px solid black;
+}
+
+#contenuto-popup {
+    align-self:center;
 }

@@ -10,24 +10,31 @@
     
     <div id="contenitore-form">
 
-        <form action="">
-            <input id="name" type="text">
-            <input id="km" type="text">
+        <form id="myForm" action="">
+            <div id="contenuto-form">
+            <label for="name">Nome Cognome</label>
+            <input id="name" type="text" placeholder="Nome e Cognome">
+            <label for="km">Km da percorrere</label>
+            <input id="km" type="text" placeholder="Km da percorrere">
+            <label for="eta">Fascia d'età</label>
             <select id="eta" name="Età">
-                <option value="Minorenne">Under 18</option>
-                <option value="Maggiorenne">19-64</option>
-                <option value="Anziano">Over 65</option>
+                <option id="under18" value="Minorenne">Under 18</option>
+                <option id="maggiorenne" value="Maggiorenne">19-64</option>
+                <option id="over65" value="Anziano">Over 65</option>
             </select>
+            <div>
             <input id="bottone_genera" type="button" value="Genera">
             <input id="bottone_annulla" type="button" value="Annulla">
+            </div>
+        </div>
         </form>
 
         <div id="popup_ticket">
-
-            <div id="name-ticket"></div>
-            <div id="tragitto-ticket"></div>
-            <div id="fascia"></div>
-
+            <div id="contenuto-popup">
+                <div id="name-ticket"></div>
+                <div id="tragitto-ticket"></div>
+                <div id="fascia"></div>
+            </div>
         </div>
 
     </div>
