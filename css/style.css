@@ -30,6 +30,7 @@ form {
 }
 
 #popup_ticket {
+    display: none;
    align-self: center;
    justify-content: center;
    width: 80%;

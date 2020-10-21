@@ -79,6 +79,9 @@ bottoneGenera.addEventListener('click' ,
         finalPrice.innerHTML = ticketPrice;
         console.log(ticketPrice);
         }
+
+        //comparsa biglietto
+        document.getElementById("popup_ticket").style.display = "block";
     }
 );
 
@@ -87,8 +90,11 @@ var bottoneAnnulla = document.getElementById("bottone_annulla");
 
 bottoneAnnulla.addEventListener('click',
     function () {
+        //reset form
         document.forms["myForm"].reset(); 
         document.getElementById('eta').selectedIndex = 0;
+        //scomparsa bgilietto
+        document.getElementById("popup_ticket").style.display = "none";
     }
 );
 
