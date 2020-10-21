@@ -14,9 +14,9 @@ console.log("Età passeggero:", eta.value);
 
 //variabili associate a button e output
 
-/* var nameTicket = document.getElementById("name");
+var nameTicket = document.getElementById("name");
 
-var tragittoTicket = document.getElementById("km"); */
+var tragittoTicket = document.getElementById("km");
 
 
 var bottoneGenera = document.getElementById("bottone_genera");
@@ -28,7 +28,7 @@ bottoneGenera.addEventListener('click' ,
         var campoKm = document.getElementById('km');
         console.log("Km da percorrere:", campoKm.value);  
         nameTicket.innerHTML =  campoName.value;
-        tragittoTicket.innerHTML = campokm.value;
+        tragittoTicket.innerHTML = campoKm.value;
     }
 );
 
