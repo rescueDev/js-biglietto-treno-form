@@ -20,17 +20,20 @@ console.log("Età passeggero:", eta.value);
 
 //variabili associate a button e output
 
-var nameTicket = document.getElementById("name");
+/* var nameTicket = document.getElementById("name");
 
-var tragittoTicket = document.getElementById("km");
+var tragittoTicket = document.getElementById("km"); */
 
 
 var bottoneGenera = document.getElementById("bottone_genera");
 
 bottoneGenera.addEventListener('click' ,
     function() { 
-      nameTicket.innerHTML =  campoName.value;
-      tragittoTicket.innerHTML = campokm.value;
+    var nameTicket = document.getElementById("name");
+
+    var tragittoTicket = document.getElementById("km");  
+    nameTicket.innerHTML =  campoName.value;
+    tragittoTicket.innerHTML = campokm.value;
     }
 );
 
