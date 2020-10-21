@@ -9,12 +9,6 @@ Categoria selezionata dall’utente */
 
 //variabili
 
-var campoName = document.getElementById('name');
-console.log("Nome passeggero:", campoName.value);
-
-var campoKm = document.getElementById('km');
-console.log("Km da percorrere:", campoKm.value);
-
 var eta = document.getElementById('eta');
 console.log("Età passeggero:", eta.value);
 
@@ -29,11 +23,12 @@ var bottoneGenera = document.getElementById("bottone_genera");
 
 bottoneGenera.addEventListener('click' ,
     function() { 
-    var nameTicket = document.getElementById("name");
-
-    var tragittoTicket = document.getElementById("km");  
-    nameTicket.innerHTML =  campoName.value;
-    tragittoTicket.innerHTML = campokm.value;
+        var campoName = document.getElementById('name');
+        console.log("Nome passeggero:", campoName.value);
+        var campoKm = document.getElementById('km');
+        console.log("Km da percorrere:", campoKm.value);  
+        nameTicket.innerHTML =  campoName.value;
+        tragittoTicket.innerHTML = campokm.value;
     }
 );
 
